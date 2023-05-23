@@ -1,0 +1,19 @@
+[workspace]
+members = ["contracts/*", "packages/*"]
+
+[workspace.package]
+edition    = "2021"
+version    = "0.0.1"
+
+[workspace.dependencies]
+cosmwasm-std = "1.1"
+cosmwasm-schema = "1.1"
+cw-storage-plus = "1.0.1"
+cw-ownable      = "0.5"
+ics721-incentive-map = { path = "./packages/ics721-incentive-map", version = "*" }
+cw2 = "1.0.1"
+# dev dependencies
+cw-multi-test = "0.16.4"
+# rand = "0.8"
+# anyhow = "1.0"
+thiserror = "1.0.40"

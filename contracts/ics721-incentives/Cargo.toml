@@ -1,0 +1,24 @@
+[package]
+name = "ics721-incentives"
+license = "GPL-3.0"
+authors = ["Mr T <mr-t@arkprotocol.io>"]
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[features]
+# for more explicit tests, cargo test --features=backtraces
+backtraces = ["cosmwasm-std/backtraces"]
+# use library feature to disable all instantiate/execute/query exports
+library = []
+
+[dependencies]
+cosmwasm-std = { workspace = true }
+cosmwasm-schema = { workspace = true }
+cw2 = { workspace = true }
+cw-storage-plus = { workspace = true }
+cw-ownable = { workspace = true }
+ics721-incentive-map = { workspace = true }
+thiserror = { workspace = true }
